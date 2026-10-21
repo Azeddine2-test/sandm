@@ -1,0 +1,6 @@
+<meta>
+	<info type="script" name="firstperson1" author="Stupidguys4t" description="First Person Script" version="1.0.0" />
+	
+	<script type="client" src="firstperson.lua" />
+	<!-- generated with Stupidguys4t -->
+</meta>

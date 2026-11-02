@@ -1,0 +1,9 @@
+<meta>
+    <info author="RekZ" name="NFSMW Speedo" version="1.0.0" type="script" description="Velocimetro estilo Need for Speed: Most Wanted con velocidad digital, RPM, vida del vehiculo y nitro" />
+    <script src="client.lua" type="client" cache="false" />
+    
+    <file src="img/10000_LINES_00.png" />
+    <file src="img/TACH_NEEDLE_00.png" />
+    <file src="img/TURBO_LINES_00.png" />
+    <file src="img/TURBO_NEEDLE_00.png" />
+</meta>

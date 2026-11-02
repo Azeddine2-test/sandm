@@ -1,0 +1,8 @@
+<meta>
+    <info author="Community template" name="Scooter Inventory Bridge Template" type="script" version="1.0.0" />
+    <description>Template adapter. Implement the TODO sections for your inventory before use.</description>
+    <script src="server.lua" type="server" />
+    <export function="hasItem" type="server" />
+    <export function="giveItem" type="server" />
+    <export function="takeItem" type="server" />
+</meta>

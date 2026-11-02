@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<meta>
+    <info author="Community Release" name="Electric Scooter Rental" type="script" version="1.4.0" />
+    <description>Electric scooter rental with an English interface, server-side validation, custom models, configurable stations, inventory bridge support, and optional weapon restrictions while carrying the scooter.</description>
+    <script src="config.lua" type="shared" />
+    <script src="client1.lua" type="client" cache="false" />
+    <script src="rent.lua" type="client" cache="false" />
+    <script src="server.lua" type="server" />
+    <oop>true</oop>
+    <file src="files/escooterrental.txd" />
+    <file src="files/escooterrental.dff" />
+    <file src="files/escooterrental.col" />
+    <file src="files/foldedscooter.dff" />
+    <file src="files/foldedscooter.col" />
+    <file src="files/foldedscooter.txd" />
+    <file src="files/448.dff" />
+    <file src="files/448.txd" />
+    <file src="files/bike.ifp" />
+    <min_mta_version client="1.5.7-9.20642" />
+</meta>

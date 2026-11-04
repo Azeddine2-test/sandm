@@ -1,0 +1,79 @@
+<meta>
+    <info author="Arena (demande 69)" name="CarPlay" version="1.0.0" type="script"
+          description="CarPlay dans les véhicules : musique YouTube / liens audio synchronisée pour tous, file d'attente, favoris, Plans, Téléphone et Messages de l'iPhone." />
+
+    <!-- Demande 69 (20/10/2026). Ouverture : clic droit sur le véhicule →
+         « CarPlay » (menu i9_interaction), place avant, iPhone requis.
+         Démarre APRÈS PhoneIOS ([ST]-StartAll). -->
+    <script src="config.lua" type="shared" cache="false" />
+    <script src="liens.lua" type="shared" cache="false" />
+    <script src="server.lua" type="server" />
+    <script src="retour.lua" type="client" cache="false" />
+    <script src="dessin.lua" type="client" cache="false" />
+    <script src="audio.lua" type="client" cache="false" />
+    <script src="acoustique.lua" type="client" cache="false" />
+    <script src="client.lua" type="client" cache="false" />
+
+    <export function="installCarPlayFromMechanic" type="server" />
+    <export function="uninstallCarPlayFromMechanic" type="server" />
+    <!-- Demande 91 : purge CarPlay d'un véhicule racheté neuf (appelé par le concessionnaire) -->
+    <export function="carplaySupprimerInstallation" type="server" />
+    <!-- Demande 112 : panneau Acoustique (i9 → Staff → Qualité audio, via admin_panel) -->
+    <export function="ouvrirAcoustique" type="server" />
+    <file src="assets/fonts/Inter-Bold.ttf" />
+    <file src="assets/fonts/Inter-Regular.ttf" />
+    <file src="assets/fonts/Inter-SemiBold.ttf" />
+    <file src="assets/images/carte.png" />
+    <file src="assets/images/carte_sa.jpg" />
+    <file src="assets/images/carte_lc.jpg" />
+    <file src="assets/data/lc_gta3_gps.csv" />
+    <file src="assets/images/reglages.png" />
+    <file src="assets/icones/reglages.png" />
+    <file src="assets/images/cercle.png" />
+    <file src="assets/images/messages.png" />
+    <file src="assets/images/musique.png" />
+    <file src="assets/images/telephone.png" />
+    <file src="assets/icones/appel.png" />
+    <file src="assets/icones/bulle.png" />
+    <file src="assets/icones/centrer.png" />
+    <file src="assets/icones/clavier.png" />
+    <file src="assets/icones/coeur.png" />
+    <file src="assets/icones/coeurplein.png" />
+    <file src="assets/icones/effacer.png" />
+    <file src="assets/icones/envoyer.png" />
+    <file src="assets/icones/etoile.png" />
+    <file src="assets/icones/fermer.png" />
+    <file src="assets/icones/file.png" />
+    <file src="assets/icones/fleche.png" />
+    <file src="assets/icones/grille.png" />
+    <file src="assets/icones/horloge.png" />
+    <file src="assets/icones/lien.png" />
+    <file src="assets/icones/moins.png" />
+    <file src="assets/icones/note.png" />
+    <file src="assets/icones/pause.png" />
+    <file src="assets/icones/personne.png" />
+    <file src="assets/icones/play.png" />
+    <file src="assets/icones/plus.png" />
+    <file src="assets/icones/poubelle.png" />
+    <file src="assets/icones/precedent.png" />
+    <file src="assets/icones/raccrocher.png" />
+    <file src="assets/icones/repere.png" />
+    <file src="assets/icones/retour.png" />
+    <file src="assets/icones/suivant.png" />
+    <file src="assets/icones/volmoins.png" />
+    <file src="assets/icones/volplus.png" />
+
+    <!-- Titres et durées YouTube (oEmbed + page de la vidéo) lus par le
+         serveur. L'administrateur doit accepter une fois, dans la console :
+             aclrequest allow CarPlay all
+         Sans cela la musique marche quand même (titre « Vidéo YouTube … »,
+         pas de passage automatique au morceau suivant). -->
+    <aclrequest>
+        <right name="function.fetchRemote" access="true" />
+    </aclrequest>
+
+    <!-- Le lecteur YouTube intégré a besoin d'un client MTA récent (1.6.x à
+         jour : correctif Referer #4531). Pas de min_mta_version pour ne
+         bloquer personne : un vieux client verra « Erreur 153 » sur la vidéo. -->
+    <oop>false</oop>
+</meta>

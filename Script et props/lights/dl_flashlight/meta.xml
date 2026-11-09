@@ -1,0 +1,15 @@
+<meta>
+	<info name="dl_flashLight" author="Ren712" version="0.0.1" type="script" />
+	<min_mta_version client="1.5.7-9.20802" />
+	<script src="c_shader_light.lua" type="client" />
+	<script src="s_shader_light.lua" type="server" />
+	<file src="shaders/shader_lightBulb.fx" type="client" />
+	<file src="shaders/shader_lightRays.fx" type="client" />
+	<file src="shaders/shader_null.fx" type="client" />
+	<file src="objects/flashlight.txd" type="client" />
+	<file src="objects/flashlight.dff" type="client" />
+	<file src="sounds/switch.wav" type="client" />
+	<include resource="pattach" />
+	<include resource="dl_lightmanager" />
+	<include resource="dl_core" />
+</meta>

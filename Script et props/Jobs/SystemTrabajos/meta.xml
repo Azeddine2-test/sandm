@@ -1,0 +1,19 @@
+<meta>
+    <info author="V1 Development Inc" type="script" name="Contratista de Empleos" version="1.0.0" />
+
+    <script src="paths.lua" type="client" />
+    <script src="theme.lua" type="client" />
+    <script src="retour.lua" type="client" />
+    <script src="habillage.lua" type="client" />
+    <script src="client.lua" type="client" />
+    <script src="server.lua" type="server" />
+    
+    <file src="assets/models/shopbasket1.dff" />
+    <file src="assets/models/shopbasket1.txd" />
+    <file src="assets/models/shopbasket1.col" />
+
+    <file src="assets/sounds/MoneySound.mp4" />
+
+    <!-- 🆕 Export : ID du panier custom (utilisé par AdminMagasin) -->
+    <export function="getCustomBasketID" type="client" />
+</meta>

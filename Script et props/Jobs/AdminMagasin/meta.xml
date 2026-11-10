@@ -1,0 +1,60 @@
+<meta>
+    <info
+        author="Phanthomme"
+        version="2.1"
+        type="script"
+        name="Admin Magasin - Gestion des Magasins"
+        description="Systeme optimise de gestion des magasins, paths, edition visuelle, cooldowns et profils NPC" />
+
+    <!-- Configuration & donnees partagees -->
+    <script src="config.lua" type="shared" cache="false" />
+    <script src="src/shared/data.lua" type="shared" cache="false" />
+
+    <!-- Scripts serveur -->
+    <script src="src/server/main.lua" type="server" cache="false" />
+    <script src="src/server/paths.lua" type="server" cache="false" />
+    <script src="src/server/injector.lua" type="server" cache="false" />
+    <script src="src/server/events.lua" type="server" cache="false" />
+    <script src="src/server/commands.lua" type="server" cache="false" />
+
+    <!-- Scripts client utiles uniquement -->
+    <script src="src/client/theme.lua" type="client" cache="false" />
+    <script src="src/client/retour.lua" type="client" cache="false" />
+    <script src="src/client/habillage.lua" type="client" cache="false" />
+    <script src="src/client/main.lua" type="client" cache="false" />
+    <script src="src/client/recorder.lua" type="client" cache="false" />
+    <script src="src/client/visualizer.lua" type="client" cache="false" />
+
+    <!-- Exports serveur : magasins -->
+    <export function="getStore" type="server" />
+    <export function="getAllStores" type="server" />
+    <export function="getAllStoresSimple" type="server" />
+    <export function="getStoreConfig" type="server" />
+
+    <export function="createStore" type="server" />
+    <export function="deleteStore" type="server" />
+    <export function="updateStore" type="server" />
+
+    <!-- Exports serveur : paths -->
+    <export function="getStorePaths" type="server" />
+    <export function="getStorePathsByType" type="server" />
+    <export function="getRandomPathByType" type="server" />
+    <export function="getPathById" type="server" />
+    <export function="countPathsForStore" type="server" />
+
+    <!-- Exports serveur : employeur -->
+    <export function="getEmployerPed" type="server" />
+    <export function="moveEmployer" type="server" />
+    <export function="changeEmployerSkin" type="server" />
+
+    <!-- Exports serveur : utilitaires -->
+    <export function="teleportPlayerSafe" type="server" />
+    <export function="hasAdminPermission" type="server" />
+    <export function="notifyStoresChanged" type="server" />
+
+    <!-- Assets client utiles à l'editeur visuel -->
+    <file src="src/assets/fonts/Poppins-Regular.ttf" />
+
+    <min_mta_version client="1.5.9" server="1.5.9" />
+    <oop>false</oop>
+</meta>
